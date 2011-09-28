@@ -10,6 +10,11 @@ Spork.prefork do
     require File.dirname(__FILE__) + "/../config/environment"
   end
   
+  def test_sign_in(user)
+    controller.sign_in(user)
+  end
+
+  
 end
 
 Spork.each_run do
